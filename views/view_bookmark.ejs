@@ -1,0 +1,63 @@
+<%- include('partials/student-header') -%>
+
+<%#  comment  %>
+
+<div class="jumbotron">
+    <h1> View Bookmarks </h1> 
+</div>
+
+<div style="text-align: center; margin-bottom: 30px; margin-top: 50px;">
+   
+</div>
+
+<div class="box">
+    <h6>
+        <% var b = (message.length === 0 ) %>
+        <p <%= b ? "hidden" : ""  %> style="color: green" > <%= message %> </p>
+    </h6>
+    <h2>Hi <%= username %> </h2> <br>
+    <h5> Bookmark list:</h5>
+
+    <div class="container">
+        <br>
+        <h5  style="text-align:left" >Count = <%=bookmark_list.length%> </h5>
+        <table class="table table-striped  mytable">
+            <thead class="table-dark">
+                <tr>
+                    <th scope="col">Project ID</th>
+                    <th scope="col">Prof ID</th>
+                    <th>Prof Name</th>
+                    <th scope="col">Title</th>
+                    <th scope="col">Description</th>
+                    <th></th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <% for(var i=0; i < bookmark_list.length ; i++){ %>
+                <tr>
+                    <% var project = bookmark_list[i] %>
+                    <th scope="row"> <%= i+1 %> </th>
+                    <% var project = bookmark_list[i] %>
+                    <td><%= project.project_id %></td>
+                    <td><%= project.prof_id %></td>
+                    <td> <%=project.title%> </td>
+                    <% var del_proj_id = project.project_id %>
+                    <% var link_to_del = "/del_bookmark/" + del_proj_id %>
+                    <td> <%=project.description%>  </td>
+                    <td><a style="margin-left: 0px;" class="btn btn-danger col-9" href=<%=link_to_del%> >Delete</a></td>
+                    
+                </tr>
+                <% } %>
+
+            </tbody>
+
+        </table>
+    </div>
+
+</div>
+
+
+
+
+<%- include('partials/user-footer') -%>

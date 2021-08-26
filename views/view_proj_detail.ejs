@@ -1,0 +1,41 @@
+<!--tags and stuff yaha par print karenge-->
+<% if(user_type === "student") { %>
+    <%- include('partials/student-header') -%>
+<% } else if(user_type === "admin") { %>
+    <%- include('partials/admin-header') -%>
+<% } else { %>
+    <%- include('partials/prof-header') -%>
+<% } %> 
+
+<%#  as this is a ejs file
+        user object is accessible here  %>
+
+<div class="jumbotron">
+    <h1> Here are the details of Project <%=project.project_id%>. </h1>
+</div>
+
+
+
+<div class="box">
+    <h6>
+        <% var b = (message.length === 0 ) %>
+        <p <%= b ? "hidden" : ""  %> style="color: green" > <%= message %> </p>
+    </h6>
+    <h2>Hi <%= username %> </h2> <br>
+    <h5> Project Details:</h5>
+        <p> <%= project.project_id %> </p>
+        <p> <%= project.prof_id %> </p>
+        <p> <%= project.first_name %> <%= project.last_name %>  </p>
+        <p> <%= project.title %> </p>
+        <p> <%= project.description %> </p>
+        <br><br>
+        <h4>Project Tags:</h4>
+        <% for(var i=0; i < tag_list.length ; i++){ %>
+            <% var tag = tag_list[i] %>
+            <p><%= tag.tag_name %></p> 
+        <% } %>
+</div>
+
+
+<%- include('partials/user-footer') -%>
+

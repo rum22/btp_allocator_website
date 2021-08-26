@@ -1,0 +1,48 @@
+<%- include('partials/prof-header') -%>
+<h3 style="margin-top: 50px;">Available Tags:</h3>
+<div style="margin-top: 150px;" class="box">
+    <h6>
+        <% var b = (message.length === 0 ) %>
+        <p <%= b ? "hidden" : ""  %> style="color: red" > <%= message %> </p>
+    </h6>
+    <h4> Available Tags: </h4>
+    <div class="container">
+        <br>
+        <h5  style="text-align:left" >Count = <%=tag_list.length%> </h5>
+        <table class="table table-striped  mytable">
+            <thead class="table-dark">
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Tag Name</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% for(var i=0; i < tag_list.length ; i++){ %>
+                <tr>
+                    <th scope="row"> <%= i+1 %> </th>
+                    <td><%= tag_list[i].tag_name %></td>  
+                </tr>
+                <% } %>
+
+            </tbody>
+
+        </table>
+    </div>
+    <h2 class="heading">Add TAGS</h2>
+    <div>
+    <form class="" action="/add_tag_proj" method="post" >
+        <div class="form-group">
+            <label for="">Tag Name<input autofocus type="text" class="form-control" name="tag_name" value="" placeholder="Enter tag name" required>
+        </div>      
+        <div class="form-group">
+            <label for="">Project ID<input autofocus type="text" class="form-control" name="proj_id" value="" placeholder="Enter Porject ID" required>
+        </div>
+        <div class="form-group">
+            <button style="max-width: 300px" type="submit" class=" form-control btn btn-success btn-sm space" name="button">Add TAG +</button>
+        </div>
+    </form>
+    </div>
+
+</div>
+
+<%- include('partials/user-footer') -%>

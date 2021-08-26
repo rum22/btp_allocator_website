@@ -1,0 +1,27 @@
+<%- include('partials/index-header') -%>
+
+<div style="margin-top: 150px;" class="box">
+    <h1 class="heading">Admin Login</h1>
+
+
+
+    <% var b = (message.length === 0 ) %>
+    <p <%= b ? "hidden" : ""  %> style="color: red" > <%= message %> </p>
+
+    <form class="" action="/admin_login" method="post" >
+        <div class="form-group">
+            <label for="">Username</label> 
+            <input autofocus type="text" class="form-control" name="username" value="" placeholder="Enter your Roll number" required>
+        </div>
+        <div class="form-group">
+            <label for="">Password</label>
+            <input type="password" class="form-control" name="password" required value="" placeholder="Enter your password">
+        </div>
+        <div class="form-group">
+            <button type="submit" class=" form-control btn btn-success btn-lg space" name="button">Log-In</button>
+        </div>
+    </form>
+</div>
+
+
+<%- include('partials/index-footer') -%>

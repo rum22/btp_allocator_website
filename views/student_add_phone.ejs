@@ -1,0 +1,32 @@
+<%- include('partials/student-header') -%>
+
+<%#  as this is a ejs file
+        user object is accessible here  %>
+
+<div class="jumbotron">
+    <h1> Add your phone number. </h1>
+</div>
+
+<h2>Hi <%= username %> </h2> <br>
+<h5> Your current phone numbers:</h5>
+<% var len = Math.floor(phone_list.length) ; %>
+<% for(var i=0; i<len ; i++){ %>
+        <% var phone_cur = phone_list[i] %>
+        <p> <%= phone_cur.phone %> </p>
+<% } %>
+
+
+<div style="margin-top: 150px;" class="box">
+    <% var b = (message.length === 0 ) %>
+    <p <%= b ? "hidden" : ""  %> style="color: red" > <%= message %> </p>
+    <form class="" action="/student_add_phone" method="post" >
+        <div class="form-group">
+            <label for="">Phone number<input autofocus type="text" class="form-control" name="phone_num" value="" placeholder="Enter phone number:" required>
+        </div>
+        <div class="form-group">
+            <button type="submit" class=" form-control btn btn-success btn-lg space" name="button">Add Number</button>
+        </div>
+    </form>
+</div>
+
+<%- include('partials/user-footer') -%>

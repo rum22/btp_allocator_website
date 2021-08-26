@@ -1,0 +1,29 @@
+<%- include('partials/student-header') -%>
+
+<%#  comment  %>
+
+<div class="jumbotron">
+    <h1> View TAs </h1> 
+</div>
+
+<div style="text-align: center; margin-bottom: 30px; margin-top: 50px;">
+   
+</div>
+
+<div class="box">
+    <h5> TA list of professor <%= first_name %>:</h5>
+    <% var len = Math.floor(ta_list.length) ; %>
+    <% for(var i=0; i<len ; i++){ %>
+            <% var ta = ta_list[i] %>
+            <p> <%= ta.ta_id %> </p>
+            <p> <%= ta.first_name %> </p>
+            <p> <%= ta.last_name %> </p>
+            <p> <%= ta.email %> </p>
+            <br><br>
+    <% } %>
+</div>
+
+
+
+
+<%- include('partials/user-footer') -%>

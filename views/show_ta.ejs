@@ -1,0 +1,60 @@
+<%- include('partials/prof-header') -%>
+
+<%#  For professors  %>
+
+<div class="jumbotron">
+    <h1> View my TA </h1> 
+</div>
+
+<div style="text-align: center; margin-bottom: 30px; margin-top: 50px;">
+   
+</div>
+
+<div class="box">
+    <h6>
+        <% var b = (message.length === 0 ) %>
+        <p <%= b ? "hidden" : ""  %> style="color: green" > <%= message %> </p>
+    </h6>
+    <h2>Hi Prof. <%= username %> </h2> <br>
+    <h5> TA list:</h5>
+    <div class="container">
+        <br>
+        <h5  style="text-align:left" >Count = <%=ta_list.length%> </h5>
+        <table class="table table-striped  mytable">
+            <thead class="table-dark">
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">TA ID</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Email</th>
+                    <th></th>
+                    <th></th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <% for(var i=0; i < ta_list.length ; i++){ %>
+                <tr>
+                    <th scope="row"> <%= i+1 %> </th>
+                    <% var ta = ta_list[i] %>
+                    <% var del_ta_id = ta.ta_id %>
+                    <% var link_to_del = "/del_ta/" + del_ta_id %>
+                    <% var link_to_update = "/update_ta/" + del_ta_id %>
+
+                    <td><%= ta.ta_id %></td>  
+                    <td> <%= ta.first_name %> <%= ta.last_name %> </td>
+                    <td> <%= ta.email %> </td>
+                    
+                    <td><a class="btn btn-primary col-7" href= <%= link_to_update %> >Update TA</a></td>
+                    <td><a class="btn btn-danger col-7" href= <%= link_to_del %> >Delete TA</a></td>
+                    
+                </tr>
+                <% } %>
+
+            </tbody>
+
+        </table>
+    </div>
+</div>
+
+<%- include('partials/user-footer') -%>

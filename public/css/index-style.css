@@ -1,0 +1,157 @@
+html {
+    height:100%;
+}
+/*body{
+    min-height:100%; 
+}*/
+
+.topdiv img{
+    height: 100%;
+    width: 100%;
+    display:block;
+}
+
+#title{
+    padding-top: 100px;
+    background-color: #e3e3e3;
+    margin-bottom: 50px !important ;
+}
+#features h3{
+    font-family: "Montserrat" !important ;
+}
+#features .col-lg-4{
+    text-align: center;
+    margin-bottom: 120px;
+}
+.far{
+    font-size: 100px;
+    color: green;
+    margin-bottom: 30px;
+}
+.fas{
+    font-size: 100px;
+    color: green;
+    margin-bottom: 30px;
+}
+
+.container-fluid{
+    padding-left: 15% !important ;
+    padding-right: 15% !important ;
+    padding-top: 3% !important;
+}
+#show{
+    background-color: orange;
+    height: 400px;
+    margin-bottom: 100px;
+}
+#show h1{
+    width: 50%;
+    margin: auto;
+    color: white;
+    text-align: center;;
+    padding-top: 120px;
+}
+
+h1{
+    font-family: "Montserrat" !important ;
+    font-size: 3rem !important ;
+    line-height: 1.5 !important ;
+    color: black;
+}
+
+/* .btn-group{
+    margin-top:40px;
+    margin-bottom: 90px;
+    text-align:center;
+} */
+
+.my-container{
+    width:40%;
+    position: absolute;
+    top: 25%;
+    left: 30%;
+    transform: translate(-50%, -50%);
+}
+
+.larger {
+    font-size: 20px !important;
+    font-weight: 600 !important;
+}
+
+.hovercolor:hover {
+    color: yellow !important;
+}
+
+.bg-light{
+    background-color: #f8f9fa!important
+}
+.center{
+    text-align: center;
+}
+.heading{
+    text-align: center;
+    margin-bottom: 50px;
+    /* text-decoration: underline; */
+}
+.box{
+    background-color: white;
+    width: 30%;
+    margin: 50px auto;
+    padding: 30px;
+    padding-bottom: 8px;
+    border-radius: 1%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+input[type=email]{
+    background-color:#f2f2f2;
+}
+input[type=text]{
+    background-color:#f2f2f2;
+}
+input[type=password]{
+    background-color:#f2f2f2;
+}
+.space{
+    margin-top: 30px;
+    /* margin-bottom: 10px; */
+}
+label{
+    font-weight: 600;
+}
+.navbar {
+    z-index: 10;
+    /* overflow: hidden; */
+    position: fixed;
+    /* Set the navbar to fixed position */
+    top: 0;
+    /* Position the navbar at the top of the page */
+    width: 100%;
+    /* Full width */
+}
+.navbar-brand{
+    margin-right: 3%;
+}
+.left{
+    margin-right: 15%;
+}
+
+footer p {
+    /* margin-top: 10%; */
+    text-align: center;
+}
+
+.footer-container{
+    font-size: 20px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.social-icon{
+    margin-left: 12px;
+    margin-right: 12px;
+}
+
+.index_text{
+    margin-top: 8px;
+    margin-bottom: 0px;
+}

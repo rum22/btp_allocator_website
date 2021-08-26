@@ -1,0 +1,40 @@
+<%- include('partials/prof-header') -%>
+<div style="margin-top: 150px;" class="box">
+    <h1 class="heading">Add Project</h1>
+
+    <div>
+    <form class="" action="/addproject" method="post" >
+        <div class="form-group">
+            <label for="">Project Title<input autofocus type="text" class="form-control" name="proj_title" value="" placeholder="Enter title:" required></label>
+        </div>
+        <div class="form-group">
+            <label for="">Project Description<input autofocus type="text" class="form-control" name="proj_desc" value="" placeholder="Enter description:" required>
+        </div>
+        <!--
+        <div class="form-group">
+            <label for="proj_description">Project Description</label>
+                <textarea id="proj_description" class="form-control" rows="5"></textarea>
+        </div>
+             <div class="md-form">
+        <i class="fas fa-pencil-alt prefix grey-text"></i>
+        <textarea id="form107" class="md-textarea form-control" rows="5"></textarea>
+        <label for="form107">Your message</label>
+      </div>
+      <div class="form-group">
+          <label for="exampleFormControlTextarea1">Example textarea</label>
+        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+    </div>-->
+    
+        <div class="form-group">
+            <button style="max-width: 300px" type="submit" class=" form-control btn btn-success btn-sm space" name="button">Add Project +</button>
+        </div>
+    </form>
+</div>
+</div>
+
+<%- include('partials/user-footer') -%>
+
+<!--
+<label for="exampleFormControlTextarea1">Example textarea</label>
+    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+-->

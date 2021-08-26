@@ -1,0 +1,50 @@
+<%- include('partials/prof-header') -%>
+
+<%#  as this is a ejs file
+        user object is accessible here  %>
+
+<div class="jumbotron">
+    <h1> Update Project Details  </h1>
+
+</div>
+
+
+<div class="container">
+    <div class="box">
+        <h6
+        <% var b = (message.length === 0 ) %>
+        <p <%= b ? "hidden" : ""  %> style="color: green" > <%= message %> </p>
+        </h6>
+    </div>
+</div>
+
+
+<!-- make this post route ***-->
+<div class="formclass">
+
+    <% var link_to_update="/prof_update_project/" + project.project_id %>
+    <form class="" action=<%= link_to_update %> method="post">
+
+        <div class="form-group">
+            <label>Project ID</label>
+            <input type="text" class="form-control" name="project_id" value=<%= project.project_id %> disabled>
+        </div>
+        <div class="form-group">
+            <label>New Title</label>
+            <input type="text" class="form-control" name="project_title" value=<%= project.title %> required>
+        </div>
+        <div class="form-group">
+            <label>New Description</label>
+            <input type="text" class="form-control" name="project_desc" value=<%= project.description %> required>
+        </div>
+        
+        <hr class="ruler">
+        <button type="submit" class=" form-control btn btn-lg btn-success finalbutton expand" >Submit</button>
+    
+    </form>
+
+</div>
+
+
+
+<%- include('partials/user-footer') -%>

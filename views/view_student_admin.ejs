@@ -1,0 +1,61 @@
+<%- include('partials/admin-header') -%>
+
+<%#  comment  %>
+
+
+<div class="jumbotron">
+    <h1> View Students </h1> 
+</div>
+
+<div style="text-align: center; margin-bottom: 30px; margin-top: 50px;">
+   
+</div>
+
+<div class="box">
+    <h6>
+        <% var b = (message.length === 0 ) %>
+        <p <%= b ? "hidden" : ""  %> style="color: green" > <%= message %> </p>
+    </h6>
+    <h2>Hi <%= username %> </h2> <br>
+    <h3> Student list:</h3>
+
+    <div class="container">
+        <br>
+        <h5  style="text-align:left" >Count = <%=student_list.length%> </h5>
+        <table class="table table-striped  mytable">
+            <thead class="table-dark">
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Student ID</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Department</th>
+                    <th scope="col">CGPA</th>
+                    <th scope="col">Email</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <% for(var i=0; i < student_list.length ; i++){ %>
+                <tr>
+                    <th scope="row"> <%= i+1 %> </th>
+                    <% var s = student_list[i] %>
+                    <td><%= s.student_id %></td>
+                    <td><%= s.first_name %></td>
+                    <td> <%=s.dept%> </td>
+                    <td> <%=s.cgpa%> </td>
+                    <td> <%=s.email%> </td>
+
+                </tr>
+                <% } %>
+
+            </tbody>
+
+        </table>
+    </div>
+
+
+  
+</div>
+
+
+<%- include('partials/user-footer') -%>

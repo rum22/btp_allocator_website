@@ -1,0 +1,23 @@
+<%- include('partials/admin-header') -%>
+
+<%#  as this is a ejs file
+        user object is accessible here  %>
+
+<div class="jumbotron">
+    <h1> Allocate project </h1>
+</div>
+
+<div style="margin-top: 150px;" class="box">
+    <% var b = (message.length === 0 ) %>
+    <p <%= b ? "hidden" : ""  %> style="color: green" > <%= message %> </p>
+    <form class="" action="/allocate_student" method="post" >
+        <div class="form-group">
+            <label for="">Admin ID<input autofocus type="text" class="form-control" name="admin_id" value="" placeholder="Enter admin ID:" required>
+        </div>
+        <div class="form-group">
+            <button type="submit" class=" form-control btn btn-success btn-lg space" name="button">Allocate projects</button>
+        </div>
+    </form>
+</div>
+
+<%- include('partials/user-footer') -%>

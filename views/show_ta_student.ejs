@@ -1,0 +1,24 @@
+<%- include('partials/student-header') -%>
+
+<%#  as this is a ejs file
+        user object is accessible here  %>
+
+<div class="jumbotron">
+    <h1> Delete a bookmark </h1>
+</div>
+<div style="margin-top: 150px;" class="box">
+    <h6>
+        <% var b = (message.length === 0 ) %>
+        <p <%= b ? "hidden" : ""  %> style="color: red" > <%= message %> </p>
+    </h6>
+    <form class="" action="/show_ta_student" method="post" >
+        <div class="form-group">
+            <label for="">Prof ID<input autofocus type="text" class="form-control" name="prof_id" value="" placeholder="Enter professor ID:" required>
+        </div>
+        <div class="form-group">
+            <button type="submit" class=" form-control btn btn-success btn-lg space" name="button">Show TAs</button>
+        </div>
+    </form>
+</div>
+
+<%- include('partials/user-footer') -%>

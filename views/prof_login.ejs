@@ -1,0 +1,29 @@
+<%- include('partials/index-header') -%> 
+
+<div style="margin-top: 150px;" class="box">
+    <h1 class="heading">Professor Login</h1>
+
+    <% var b = (message.length === 0 ) %>
+    <p <%= b ? "hidden" : ""  %> style="color: red" >   <%= message %> </p>
+
+    <form class="" action="/prof_login" method="post" >
+        <div class="form-group">
+            <label for="">Username</label>
+            <input autofocus type="text" class="form-control" name="username" value="" placeholder="Enter your username" required>
+        </div>
+        <div class="form-group">
+            <label for="">Password</label>
+            <input type="password" class="form-control" name="password" required value="" placeholder="Enter your password">
+        </div>
+        <div class="form-group">
+            <button type="submit" class=" form-control btn btn-success btn-lg space" name="button">Log-In</button>
+        </div>
+        <p class="center" >
+            Don't have an account?
+            <a href="/prof_reg">Register</a>
+        </p>
+    </form>
+</div>
+
+
+<%- include('partials/index-footer') -%>

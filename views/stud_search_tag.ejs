@@ -1,0 +1,29 @@
+<%- include('partials/student-header') -%>
+
+<%#  as this is a ejs file
+        user object is accessible here  %>
+
+<div class="jumbotron">
+    <h1> Search projects by tags </h1>
+</div>
+
+<h2>Hi <%= username %> </h2> <br>
+<h5> Tags available:</h5>
+<% var len = Math.floor(tag_list.length) ; %>
+<% for(var i=0; i<len ; i++){ %>
+        <% var tag = tag_list[i] %>
+        <p> <%= tag.tag_name %> </p>
+<% } %>
+
+<div style="margin-top: 150px;" class="box">
+    <form class="" action="/stud_search_tag" method="post" >
+        <div class="form-group">
+            <label for="">Tag Name<input autofocus type="text" class="form-control" name="tag_name" value="" placeholder="Enter tag name" required>
+        </div>
+        <div class="form-group">
+            <button type="submit" class=" form-control btn btn-success btn-lg space" name="button">Search by tag</button>
+        </div>
+    </form>
+</div>
+
+<%- include('partials/user-footer') -%>

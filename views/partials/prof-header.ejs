@@ -1,0 +1,49 @@
+ 
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+
+    <title> PROF </title>
+    <link rel="icon" href="images/favicon.ico">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/css/styles.css">
+
+</head>
+
+<body class="bg-light">
+
+    <!-- navbar for logged in user -->
+    <nav class="above navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand hovercolor larger" style="font-size: 23px !important;" href="/prof_home"> <img src="/images/mm.png" style="height:40px; width: 40px;"> BTP Allocator </a>
+        <ul class="navbar-nav mr-auto ">
+            <li class="nav-item active rightSpace "> <a class="nav-link hovercolor larger" href="/prof_home"> <i class="fa-6x fa fas fa-home"></i> My Dashboard</a> </li>
+            <!-- <li class="nav-item active rightSpace "> <a class="nav-link hovercolor larger" href="/help"> <i class="fa fas fa-question-circle"></i> Help</a> </li> -->
+        </ul>
+        <ul class="navbar-nav ml-auto">
+
+           
+
+            <li class="nav-item active"> <a href="/logout" class="btn btn-danger larger">Logout <i class="fa fa-sign-out" aria-hidden="true"></i> </a> </li>
+        </ul>
+    </nav>
+
+
+    <!-- Side navigation -->
+    <div class="makeSpaceAbove sidenav ">
+        <a href="/addproject"> <i class="fa fa-2x fas fa-users icon"></i> Add Project</a>
+        <a href="/prof_update_project"> <i class="fa fa-2x fas fa-users icon"></i> Update Project</a>
+        <a href="/show_projects"> <i class="fa fa-2x fas fa-envelope icon"></i> Show Projects</a>
+        <a href="/add_tag_proj"> <i class="fa fa-2x fas fa-envelope icon"></i> Add tags</a>
+        <a href="/add_ta"> <i class="fa fa-2x fas fa-users icon"></i> Add TA</a>
+        <!--<a href="/update_ta"> <i class="fa fa-2x fas fa-users icon"></i> Update TA</a>-->
+        <a href="/show_ta"> <i class="fa fa-2x fas fa-envelope icon"></i> Show TA</a>        
+        <a href="/prof_add_phone"> <i class="fa fa-2x fas fa-envelope icon"></i>Add phone number</a>
+        <a href="/allocated_students"> <i class="fas fa-2x fa fa-user-plus"></i> Students Allocated </a>
+        <a href="/updatedetails_prof"> <i class="fa fa-2x far fa-edit icon"></i> Update details</a>
+    </div>
+
+    <!-- Page content -->
+    <div class="main">

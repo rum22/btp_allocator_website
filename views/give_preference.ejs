@@ -1,0 +1,90 @@
+<%- include('partials/student-header') -%>
+
+<%#    %>
+
+<div class="jumbotron">
+    <h1> Update Details  </h1>
+
+</div>
+
+
+<div class="container">
+    <div class="box">
+        
+        <h6
+        <% var b = (message.length === 0 ) %>
+        <p <%= b ? "hidden" : ""  %> style="color: green" > <%= message %> </p>
+        </h6>
+        
+        
+    </div>
+</div>
+
+
+
+<div class="formclass">
+
+    <form class="" action="/give_preference" method="post">
+
+        <h2 style="margin-top: 0px; margin-bottom: 20px;">Fill  Project  IDs :</h2>
+
+        <br> <br>
+        <p>If already filled they will appear in respective places</p>
+        <hr class="ruler">
+
+        <!-- it is big input line -->
+
+        <!-- <div class="form-group">
+            <label>Email-ID</label>
+            <input type="text" class="form-control" name="email" value='abcd' >
+        </div> -->
+
+        <div class="form-row">
+            
+            <div class="form-group col-md-6">
+                <label>Preference 1 :</label>
+
+
+                <input autofocus required type="text" class="form-control"  name="p1" placeholder = <%=user.pref_1%>  >
+            </div>
+            <br>
+            <div class="form-group col-md-6">
+                <label>Preference 2 :</label>
+                <input required  type="text" class="form-control"  name="p2" placeholder = <%=user.pref_2%> >
+            </div>
+            <div class="form-group col-md-6">
+                <label>Preference 3 :</label>
+                <input required  type="text" class="form-control"  name="p3" placeholder = <%=user.pref_3%> >
+            </div>
+            <div class="form-group col-md-6">
+                <label>Preference 4 :</label>
+                <input required  type="text" class="form-control"  name="p4" placeholder = <%=user.pref_4%> >
+            </div>
+            <div class="form-group col-md-6">
+                <label>Preference 5 :</label>
+                <input required  type="text" class="form-control"  name="p5" placeholder = <%=user.pref_5%> >
+            </div>
+            <div class="form-group col-md-6">
+                <label>Preference 6 :</label>
+                <input required type="text" class="form-control"  name="p6" placeholder = <%=user.pref_6%> >
+            </div>
+            <div class="form-group col-md-6">
+                <label>Preference 7 :</label>
+                <input required  type="text" class="form-control"  name="p7" placeholder = <%=user.pref_7%> >
+            </div>
+            <div class="form-group col-md-6">
+                <label>Preference 8 :</label>
+                <input required  type="text" class="form-control"  name="p8" placeholder = <%=user.pref_8%> >
+            </div>
+        </div>  
+
+        <hr class="ruler">
+        <button type="submit" class=" form-control btn btn-lg btn-success finalbutton expand" >Submit</button>
+    
+    </form>
+
+</div>
+
+
+
+<%- include('partials/user-footer') -%>
